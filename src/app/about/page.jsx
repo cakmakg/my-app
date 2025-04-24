@@ -1,7 +1,12 @@
-
+"use client"
 import React from 'react'
+import Link from 'next/link'
+import {useRouter} from "next/navigation"
 
 const About = () => {
+
+  const router=useRouter()
+
   return (
     <div className="bg-gray-700  flex justify-center items-center h-screen"> 
  <div className="max-w-4xl w-full bg-white p-8 rounded-lg shadow-lg">
@@ -25,12 +30,16 @@ const About = () => {
 
         {/* İletişim butonu */}
         <div className="flex justify-center">
-          <a
-            href="/about/settings"
+          <Link  href="/about/settings"
             className="px-6 py-3 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition duration-300"
           >
             Bana Ulaşın
-          </a>
+          </Link>
+
+        <button className="px-4 my-2 mx-2 py-2 bg-blue-500 text-white rounded hover:bg-blue-600" onClick={()=>router.back()}>
+      Geri
+     </button>
+
         </div>
       </div>
     </div>
