@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image";
-import Cards from "./components/Cards"  
+import Cards from "../components/Cards"  
 import {useRouter} from "next/navigation"
 
 export default function Home() {
